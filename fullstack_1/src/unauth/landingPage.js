@@ -1,9 +1,15 @@
 import React from 'react';
 import './landingPage.css';
+import NavBar from './components/navBar';
+import TimeStamp from './components/timeStamp';
+import Bumpups from './components/bumpups';
+import Footer from './components/footer';
 
 const LandingPage = () => {
   return (
     <div className="landing-page">
+      <NavBar />
+      <TimeStamp />
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
@@ -67,6 +73,9 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+
+      <Bumpups />
+      <Footer />
     </div>
   );
 };

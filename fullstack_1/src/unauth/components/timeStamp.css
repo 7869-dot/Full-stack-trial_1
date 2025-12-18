@@ -1,0 +1,23 @@
+.timestamp {
+  padding: 1rem 2rem;
+  background: #e2e8f0;
+  text-align: center;
+}
+
+.timestamp-text {
+  margin: 0;
+  color: #4a5568;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .timestamp {
+    padding: 0.75rem 1rem;
+  }
+
+  .timestamp-text {
+    font-size: 0.85rem;
+  }
+}
+
