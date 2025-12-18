@@ -1,19 +1,20 @@
 import React from 'react';
 import './navbar.css';
+import logo from '../../assests/logo.jpg';
 
 const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <h2>Logo</h2>
+          <img src={logo} alt="tubestamp logo" className="logo-image" />
+          <span className="logo-text">Prodstamp</span>
         </div>
-        <ul className="navbar-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div className="navbar-links">
+          <a href="#pricing" className="nav-link">Pricing</a>
+          <a href="#blog" className="nav-link">Blog</a>
+        </div>
+        <button className="navbar-cta">Do More With Video</button>
       </div>
     </nav>
   );
