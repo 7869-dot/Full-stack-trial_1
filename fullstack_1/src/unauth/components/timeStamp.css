@@ -1,7 +1,12 @@
 .timestamp {
   padding: 3rem 1.5rem 4rem;
-  background: radial-gradient(circle at top, #020617 0%, #020617 45%, #000000 100%);
-  color: #e5e7eb;
+  background: radial-gradient(
+    circle at top,
+    var(--color-bg-surface) 0%,
+    var(--color-bg-surface) 45%,
+    #000000 100%
+  );
+  color: var(--color-text-main);
 }
 
 .timestamp-inner {
@@ -48,20 +53,20 @@
   margin: 1.25rem 0 0;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #f9fafb;
+  color: var(--color-text-strong);
   text-align: center;
 }
 
 .timestamp-status {
   margin: 0.75rem 0;
   font-size: 0.95rem;
-  color: #9ca3af;
+  color: var(--color-text-muted);
 }
 
 .timestamp-error {
   margin: 0.75rem 0;
   font-size: 0.95rem;
-  color: #fecaca;
+  color: var(--color-error);
 }
 
 .timestamp-list {
@@ -80,7 +85,7 @@
   padding: 0.85rem 1rem;
   border-radius: 999px;
   background: rgba(15, 23, 42, 0.92);
-  border: 1px solid rgba(148, 163, 184, 0.5);
+  border: 1px solid var(--color-border-subtle);
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.85);
 }
 
@@ -91,14 +96,19 @@
   font-weight: 600;
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
-  background: radial-gradient(circle at top, #22c55e 0%, #16a34a 40%, #15803d 100%);
+  background: radial-gradient(
+    circle at top,
+    var(--color-accent) 0%,
+    var(--color-accent-dark) 40%,
+    var(--color-accent-darker) 100%
+  );
   color: #022c22;
   box-shadow: 0 8px 20px rgba(22, 163, 74, 0.75);
 }
 
 .timestamp-label {
   font-size: 0.95rem;
-  color: #e5e7eb;
+  color: var(--color-text-main);
 }
 
 @media (max-width: 768px) {
@@ -112,6 +122,28 @@
 
   .timestamp-item {
     padding: 0.8rem 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timestamp-inner {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .timestamp-title {
+    font-size: 1.25rem;
+  }
+
+  .timestamp-item {
+    gap: 0.75rem;
+  }
+
+  .timestamp-time {
+    font-size: 0.85rem;
+  }
+
+  .timestamp-label {
+    font-size: 0.9rem;
   }
 }
 

@@ -1,6 +1,6 @@
 .bumpups {
   padding: 3rem 2rem;
-  background: #f8f9fa;
+  background: var(--color-bg-section-light);
 }
 
 .bumpups-container {
@@ -12,12 +12,12 @@
 .bumpups-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #2d3748;
+  color: var(--color-navbar-text);
   margin-bottom: 1rem;
 }
 
 .bumpups-content {
-  color: #718096;
+  color: var(--color-text-muted);
   font-size: 1.1rem;
 }
 
@@ -28,6 +28,20 @@
 
   .bumpups-title {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bumpups {
+    padding: 1.75rem 1rem;
+  }
+
+  .bumpups-title {
+    font-size: 1.35rem;
+  }
+
+  .bumpups-content {
+    font-size: 1rem;
   }
 }
 
