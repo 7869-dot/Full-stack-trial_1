@@ -1,23 +1,75 @@
 .timestamp {
-  padding: 1rem 2rem;
-  background: #e2e8f0;
-  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+  background: radial-gradient(circle at top, #020617 0%, #020617 45%, #000000 100%);
+  color: #e5e7eb;
 }
 
-.timestamp-text {
+.timestamp-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.24) 0%, rgba(15, 23, 42, 0.96) 50%, rgba(15, 23, 42, 1) 100%);
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.timestamp-title {
+  margin: 0 0 1.75rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #f9fafb;
+  text-align: left;
+}
+
+.timestamp-list {
+  list-style: none;
   margin: 0;
-  color: #4a5568;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.timestamp-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.85);
+}
+
+.timestamp-time {
+  font-family: 'SF Mono', ui-monospace, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at top, #22c55e 0%, #16a34a 40%, #15803d 100%);
+  color: #022c22;
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.75);
+}
+
+.timestamp-label {
+  font-size: 0.95rem;
+  color: #e5e7eb;
 }
 
 @media (max-width: 768px) {
   .timestamp {
-    padding: 0.75rem 1rem;
+    padding: 2.25rem 1rem 3rem;
   }
 
-  .timestamp-text {
-    font-size: 0.85rem;
+  .timestamp-inner {
+    padding: 2rem 1.5rem;
+  }
+
+  .timestamp-item {
+    padding: 0.8rem 0.9rem;
   }
 }
 

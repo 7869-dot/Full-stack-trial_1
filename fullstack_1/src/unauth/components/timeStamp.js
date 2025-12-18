@@ -1,20 +1,26 @@
 import React from 'react';
 import './timeStamp.css';
 
-const TimeStamp = () => {
-  const currentDate = new Date().toLocaleDateString('en-US', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
+const TimeStamp = ({ videoTitle, timestamps }) => {
+  if (!timestamps || timestamps.length === 0) {
+    return null;
+  }
 
   return (
-    <div className="timestamp">
-      <p className="timestamp-text">{currentDate}</p>
-    </div>
+    <section className="timestamp">
+      <div className="timestamp-inner">
+        {videoTitle && <h2 className="timestamp-title">{videoTitle}</h2>}
+        <ul className="timestamp-list">
+          {timestamps.map((item, index) => (
+            <li key={index} className="timestamp-item">
+              <span className="timestamp-time">{item.time}</span>
+              <span className="timestamp-label">{item.label}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 };
 
 export default TimeStamp;
-
