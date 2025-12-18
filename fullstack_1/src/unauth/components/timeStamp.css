@@ -7,19 +7,61 @@
 .timestamp-inner {
   max-width: 900px;
   margin: 0 auto;
-  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.24) 0%, rgba(15, 23, 42, 0.96) 50%, rgba(15, 23, 42, 1) 100%);
-  border-radius: 18px;
-  padding: 2.5rem 2rem;
+  background: radial-gradient(
+    circle at top left,
+    rgba(37, 99, 235, 0.24) 0%,
+    rgba(15, 23, 42, 0.96) 50%,
+    rgba(15, 23, 42, 1) 100%
+  );
+  border-radius: 20px;
+  padding: 2.75rem 2.25rem;
   box-shadow: 0 22px 60px rgba(0, 0, 0, 0.9);
   border: 1px solid rgba(148, 163, 184, 0.4);
 }
 
+.video-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.thumbnail-wrapper {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+.video-thumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-color: #020617;
+}
+
 .timestamp-title {
-  margin: 0 0 1.75rem;
-  font-size: 1.4rem;
+  margin: 1.25rem 0 0;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #f9fafb;
-  text-align: left;
+  text-align: center;
+}
+
+.timestamp-status {
+  margin: 0.75rem 0;
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+.timestamp-error {
+  margin: 0.75rem 0;
+  font-size: 0.95rem;
+  color: #fecaca;
 }
 
 .timestamp-list {
@@ -65,7 +107,7 @@
   }
 
   .timestamp-inner {
-    padding: 2rem 1.5rem;
+    padding: 2.25rem 1.5rem;
   }
 
   .timestamp-item {
